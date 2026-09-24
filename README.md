@@ -7,6 +7,8 @@
 
 API REST para gerenciar uma biblioteca pessoal de jogos: cadastro de usuários, autenticação JWT e, nas próximas etapas, catálogo de jogos, biblioteca/wishlist e importação assíncrona de dados via fila.
 
+O front-end fica no repositório [game-vault-web](https://github.com/FilipeTdSs/game-vault-web) (Angular 20 + Tailwind CSS).
+
 > 🚧 Em desenvolvimento. Veja o [roadmap](#-roadmap).
 
 ## ✨ Funcionalidades
@@ -111,7 +113,7 @@ cp .env.example .env.test
 - [ ] Importação de jogos da API RAWG com fila (**BullMQ + Redis**)
 - [ ] Cache das listagens com Redis e rate limiting
 - [ ] Deploy
-- [ ] Front-end em Angular
+- [ ] Front-end em Angular ([em andamento](https://github.com/FilipeTdSs/game-vault-web))
 
 ## 👤 Autor
 
