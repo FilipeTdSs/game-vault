@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: game-vault-db
+    environment:
+      POSTGRES_USER: gamevault
+      POSTGRES_PASSWORD: gamevault
+      POSTGRES_DB: game_vault
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U gamevault -d game_vault']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
