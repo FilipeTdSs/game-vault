@@ -12,7 +12,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 
 const SALT_ROUNDS = 10;
 
-/** Fields safe to return to clients (never the password hash). */
 export const publicUserSelect = {
   id: true,
   name: true,

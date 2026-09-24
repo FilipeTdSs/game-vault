@@ -19,8 +19,6 @@ export class AuthService {
 
   async login({ email, password }: LoginDto) {
     const user = await this.usersService.findByEmailWithPassword(email);
-    // Same error for unknown email and wrong password, to avoid leaking which
-    // emails are registered.
     if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
       throw new UnauthorizedException('Invalid credentials');
     }

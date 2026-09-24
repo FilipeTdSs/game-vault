@@ -12,7 +12,6 @@ interface UserBody {
   email: string;
 }
 
-// Requires a running PostgreSQL with migrations applied (see README).
 describe('Auth & Users (e2e)', () => {
   let app: INestApplication<App>;
   let prisma: PrismaService;

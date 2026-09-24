@@ -3,10 +3,6 @@ import { BaseExceptionFilter } from '@nestjs/core';
 import { Prisma } from '@prisma/client';
 import type { Response } from 'express';
 
-/**
- * Translates known Prisma errors into HTTP responses so services don't need
- * to check uniqueness or existence before every write.
- */
 @Catch(Prisma.PrismaClientKnownRequestError)
 export class PrismaExceptionFilter extends BaseExceptionFilter {
   catch(exception: Prisma.PrismaClientKnownRequestError, host: ArgumentsHost) {
